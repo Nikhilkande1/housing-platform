@@ -1,0 +1,12 @@
+package com.tejasnirman.api.repository;
+
+import com.tejasnirman.api.model.Vendor;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+import java.util.Optional;
+
+public interface VendorRepository extends JpaRepository<Vendor, Long> {
+    Optional<Vendor> findByUserId(Long userId);
+    List<Vendor> findByCategory(String category);
+    List<Vendor> findByIsVerifiedTrue();
+}

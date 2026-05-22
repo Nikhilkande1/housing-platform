@@ -1,0 +1,26 @@
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Build outputs and targets
+**/target/
+**/.next/
+**/build/
+**/dist/
+**/out/
+
+# Dependencies
+**/node_modules/
+/lombok.jar
+/maven.zip
+/maven/
+
+# Temp and logs
+*.log
+.temp/
+tmp/
