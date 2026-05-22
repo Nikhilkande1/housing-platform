@@ -5,7 +5,7 @@ import DashboardLayout from "@/components/DashboardLayout";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search, MessageSquare, Clock, MapPin, Star,
-  ArrowUpRight, Send, RefreshCw, Check
+  ArrowUpRight, Send, RefreshCw, Check, Mail, Phone
 } from "lucide-react";
 import { cn } from "@/utils/cn";
 import { apiCall } from "@/lib/auth";
@@ -150,6 +150,24 @@ export default function EnquiryDashboard() {
                 placeholder="Search properties, locations..."
                 className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-4 text-white outline-none focus:border-accent transition-all placeholder:text-white/20 text-sm"
               />
+            </div>
+
+            {/* Direct Contact Enquiries Banner */}
+            <div className="glass p-6 rounded-3xl border border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-6 bg-gradient-to-r from-accent/5 via-white/5 to-transparent">
+              <div className="space-y-1">
+                <h3 className="text-white font-bold text-sm">Direct Enquiries Support</h3>
+                <p className="text-white/40 text-xs">For immediate assistance or custom broker assistance, contact our tejas nirman desk.</p>
+              </div>
+              <div className="flex flex-wrap gap-3 text-xs font-bold uppercase tracking-widest">
+                <a href="mailto:Tejasnirman1@gmail.com" className="flex items-center gap-2 bg-white/5 hover:bg-accent hover:text-black border border-white/10 px-4 py-3 rounded-xl transition-all group">
+                  <Mail size={14} className="text-accent group-hover:text-inherit" />
+                  Tejasnirman1@gmail.com
+                </a>
+                <a href="tel:9676467909" className="flex items-center gap-2 bg-white/5 hover:bg-accent hover:text-black border border-white/10 px-4 py-3 rounded-xl transition-all group">
+                  <Phone size={14} className="text-accent group-hover:text-inherit" />
+                  9676467909
+                </a>
+              </div>
             </div>
 
             {/* Featured Properties */}
